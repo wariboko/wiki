@@ -6,15 +6,13 @@
 
 
 {%block body%}
+<h1>{{title}}</h1>
+{{page|safe}}
     <form action="{% url 'wiki:edit' %}" method="POST">
-        {% csrf_token %}
-
         <button type="submit" name="edit" value="{{title}}" id="edit">edit</button>
 
+        {% csrf_token %}
+        
     </form>
-
-    <h1>{{title}}</h1>
-
-{{page|safe}}
 
 {%endblock%}

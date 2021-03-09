@@ -14,11 +14,11 @@ markdowner = Markdown()
 
 class NewAddForm(forms.Form):
     title = forms.CharField(label= "Title", required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    content = forms.CharField(label="New Entry", required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    content = forms.CharField(label="New Entry", required=False, widget=forms.Textarea(attrs={'class': 'form-control'}))
 
 class Edit(forms.Form):
     title = forms.CharField(label= "Title", required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    content = forms.CharField(label="Edit Content", required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    content = forms.CharField(label="Edit Content", required=False, widget=forms.Textarea(attrs={'class': 'form-control'}))
 
 def index(request):
     return render(request, "encyclopedia/index.html", {

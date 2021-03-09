@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    <h1 class="text-align-pages">Welcome to Encyclopedia Pages</h1>
 
-    <ul>
+    <ul class="decoration">
         {% for entry in entries %}
             <li><a href="{% url 'wiki:title' title=entry %}">{{ entry }}</a></li>
         {% endfor %}
